@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game on Chouyuzuki&#39;s Blog</title>
+    <link>https://ChouYuduki.github.io/categories/game/</link>
+    <description>Recent content in Game on Chouyuzuki&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Jun 2023 12:19:08 +0800</lastBuildDate><atom:link href="https://ChouYuduki.github.io/categories/game/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Game-making Record</title>
+      <link>https://ChouYuduki.github.io/2023/06/my-game-making-record/</link>
+      <pubDate>Mon, 19 Jun 2023 12:19:08 +0800</pubDate>
+      
+      <guid>https://ChouYuduki.github.io/2023/06/my-game-making-record/</guid>
+      <description>&lt;p&gt;I am engaging in making game now, so I&amp;rsquo;m learning 2d unity game-making.
+I plan to record the progression of making my first 2d game in this blog.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
