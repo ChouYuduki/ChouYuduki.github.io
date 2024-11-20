@@ -3,15 +3,45 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-11-19T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/aigc/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/basic-operation-of-shell/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/how-to-config-instant-ngp/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/instant-ngp/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/linux/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/machine-learning/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/shell/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tutorial/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-11-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/p/basic-operation-of-vim/</loc>
-    <lastmod>2024-11-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-11-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/git/</loc>
@@ -32,16 +62,7 @@
     <loc>http://localhost:1313/page/</loc>
     <lastmod>2024-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-11-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-11-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/p/tips-of-config-envs-in-linux/</loc>
-    <lastmod>2024-11-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/tutorial/</loc>
     <lastmod>2024-11-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/vim/</loc>

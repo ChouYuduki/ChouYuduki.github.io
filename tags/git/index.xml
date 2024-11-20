@@ -56,6 +56,9 @@ so you have to let git stop tracking the file:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;after the above, every time you want to push your modification, just use &lt;code&gt;git push&lt;/code&gt; without any additional parameters.&lt;/p&gt;
 &lt;h3 id=&#34;get-newest-version-of-this-repository&#34;&gt;get newest version of this repository
 &lt;/h3&gt;&lt;p&gt;use &lt;code&gt;git pull&lt;/code&gt; in this directory to get newest modificaiton&lt;/p&gt;
+&lt;h3 id=&#34;others&#34;&gt;others
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;git clone --recursive&lt;/code&gt;
+clone main repository and all of submodules at the same time&lt;/p&gt;
 </description>
         </item>
         
