@@ -7,7 +7,22 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Yuduki&#39;s Blog</copyright>
-        <lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 25 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ブックの感想ー記号学原理</title>
+        <link>http://localhost:1313/p/%E3%83%96%E3%83%83%E3%82%AF%E3%81%AE%E6%84%9F%E6%83%B3%E3%83%BC%E8%A8%98%E5%8F%B7%E5%AD%A6%E5%8E%9F%E7%90%86/</link>
+        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/%E3%83%96%E3%83%83%E3%82%AF%E3%81%AE%E6%84%9F%E6%83%B3%E3%83%BC%E8%A8%98%E5%8F%B7%E5%AD%A6%E5%8E%9F%E7%90%86/</guid>
+        <description>&lt;p&gt;記号学はさまざまな学問と関係があります。特にゲシュタルト心理学において、この学問は一つの図形のように個々の要素の総和以上のまとまりのある形態をゲシュタルトという。&lt;/p&gt;
+&lt;h3 id=&#34;第一章だいいっしょう&#34;&gt;第一章(だいいっしょう)
+&lt;/h3&gt;&lt;p&gt;記号学&lt;strong&gt;における&lt;/strong&gt;ゼロ記号とは、表面的には「何もない」ように見えても、文脈や他の記号との関係性において強い意味を持つことがあります。&lt;br&gt;
+例えば、空白、暗闇、静かさ、無味など。&lt;/p&gt;
+&lt;p&gt;記号は「物源」に基づいて３つに分けられることがわかります。&lt;br&gt;
+１つ目は自然の事物、２つ目は人間が製造した器物、３つ目は人間が製造した「純粋な記号」であり、言語、芸術、表情、姿勢など。&lt;/p&gt;
+&lt;p&gt;記号が表す意味は単なる「生成過程」(becoming)にすぎません。一旦意味が現れると、記号は終わり、さらにその意味も消失してしまいます。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Basic Operation of Shell</title>
         <link>http://localhost:1313/p/basic-operation-of-shell/</link>
         <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
