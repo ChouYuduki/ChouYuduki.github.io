@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Nerf on Yuduki&#39;s Blog</title>
+        <link>http://localhost:1313/tags/nerf/</link>
+        <description>Recent content in Nerf on Yuduki&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Yuduki&#39;s Blog</copyright>
+        <lastBuildDate>Mon, 25 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/nerf/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Nerf Source Code Explain</title>
+        <link>http://localhost:1313/p/nerf-source-code-explain/</link>
+        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/nerf-source-code-explain/</guid>
+        <description>&lt;h2 id=&#34;basic-conception&#34;&gt;Basic Conception
+&lt;/h2&gt;&lt;h3 id=&#34;neual-networks&#34;&gt;Neual Networks
+&lt;/h3&gt;&lt;p&gt;CNN, namely Convolutional(畳み込み) Neural Networks&lt;br&gt;
+for example, if you want to recognize an image &amp;ldquo;X&amp;rdquo;, you can change the image into matrix, then you can make three matrices
+$$
+\begin{bmatrix}
+a &amp;amp; b \
+c &amp;amp; d
+\end{bmatrix}&lt;/p&gt;
+&lt;p&gt;$$&lt;/p&gt;
+&lt;p&gt;which have the specific feature of &amp;ldquo;X&amp;rdquo;, left-above, center, and right above.&lt;/p&gt;
+&lt;h3 id=&#34;sperical-harmonics&#34;&gt;Sperical harmonics
+&lt;/h3&gt;&lt;p&gt;It is a type of function expansion in 3D space. It is a basis fuction on a spherical surface, similar to how Fourier series perform an orthogonal expansion on a 1D interval.&lt;/p&gt;
+&lt;p&gt;spherical harmonics can indeed be seen as a &lt;strong&gt;3D basis function expansion:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$E = mc^2$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Polynomial expansion: Uses x^3, x^2, x^1, x^0&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

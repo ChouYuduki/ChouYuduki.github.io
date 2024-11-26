@@ -8,6 +8,41 @@
         <language>en-us</language>
         <copyright>Yuduki&#39;s Blog</copyright>
         <lastBuildDate>Mon, 25 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Japanese Learing Notes</title>
+        <link>http://localhost:1313/p/japanese-learing-notes/</link>
+        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/japanese-learing-notes/</guid>
+        <description>&lt;p&gt;３つ　と　３つ目&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Nerf Source Code Explain</title>
+        <link>http://localhost:1313/p/nerf-source-code-explain/</link>
+        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/nerf-source-code-explain/</guid>
+        <description>&lt;h2 id=&#34;basic-conception&#34;&gt;Basic Conception
+&lt;/h2&gt;&lt;h3 id=&#34;neual-networks&#34;&gt;Neual Networks
+&lt;/h3&gt;&lt;p&gt;CNN, namely Convolutional(畳み込み) Neural Networks&lt;br&gt;
+for example, if you want to recognize an image &amp;ldquo;X&amp;rdquo;, you can change the image into matrix, then you can make three matrices
+$$
+\begin{bmatrix}
+a &amp;amp; b \
+c &amp;amp; d
+\end{bmatrix}&lt;/p&gt;
+&lt;p&gt;$$&lt;/p&gt;
+&lt;p&gt;which have the specific feature of &amp;ldquo;X&amp;rdquo;, left-above, center, and right above.&lt;/p&gt;
+&lt;h3 id=&#34;sperical-harmonics&#34;&gt;Sperical harmonics
+&lt;/h3&gt;&lt;p&gt;It is a type of function expansion in 3D space. It is a basis fuction on a spherical surface, similar to how Fourier series perform an orthogonal expansion on a 1D interval.&lt;/p&gt;
+&lt;p&gt;spherical harmonics can indeed be seen as a &lt;strong&gt;3D basis function expansion:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$E = mc^2$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Polynomial expansion: Uses x^3, x^2, x^1, x^0&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>ブックの感想ー記号学原理</title>
         <link>http://localhost:1313/p/%E3%83%96%E3%83%83%E3%82%AF%E3%81%AE%E6%84%9F%E6%83%B3%E3%83%BC%E8%A8%98%E5%8F%B7%E5%AD%A6%E5%8E%9F%E7%90%86/</link>
         <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
@@ -15,9 +50,11 @@
         <guid>http://localhost:1313/p/%E3%83%96%E3%83%83%E3%82%AF%E3%81%AE%E6%84%9F%E6%83%B3%E3%83%BC%E8%A8%98%E5%8F%B7%E5%AD%A6%E5%8E%9F%E7%90%86/</guid>
         <description>&lt;p&gt;記号学はさまざまな学問と関係があります。特にゲシュタルト心理学において、この学問は一つの図形のように個々の要素の総和以上のまとまりのある形態をゲシュタルトという。&lt;/p&gt;
 &lt;h3 id=&#34;第一章だいいっしょう&#34;&gt;第一章(だいいっしょう)
-&lt;/h3&gt;&lt;h2 id=&#34;記号は物源に基づいて３つに分けられることがわかります１つ目は自然の事物２つ目は人間が製造した器物３つ目は人間が製造した純粋な記号であり言語芸術表情姿勢など&#34;&gt;記号学&lt;strong&gt;における&lt;/strong&gt;ゼロ記号とは、表面的には「何もない」ように見えても、文脈や他の記号との関係性において強い意味を持つことがあります。例えば、空白、暗闇、静かさ、無味など。
-記号は「物源」に基づいて３つに分けられることがわかります。１つ目は自然の事物、２つ目は人間が製造した器物、３つ目は人間が製造した「純粋な記号」であり、言語、芸術、表情、姿勢など。
-&lt;/h2&gt;&lt;p&gt;記号が表す意味は単なる「生成過程」(becoming)にすぎません。一旦意味が現れると、記号は終わり、さらにその意味も消失してしまいます。&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;記号学&lt;strong&gt;における&lt;/strong&gt;ゼロ記号とは、表面的には「何もない」ように見えても、文脈や他の記号との関係性において強い意味を持つことがあります。&lt;br&gt;
+例えば、空白、暗闇、静かさ、無味など。&lt;/p&gt;
+&lt;p&gt;記号は「物源」に基づいて３つに分けられることがわかります。&lt;br&gt;
+１つ目は自然の事物、２つ目は人間が製造した器物、３つ目は人間が製造した「純粋な記号」であり、言語、芸術、表情、姿勢など。&lt;/p&gt;
+&lt;p&gt;記号が表す意味は単なる「生成過程」(becoming)にすぎません。一旦意味が現れると、記号は終わり、さらにその意味も消失してしまいます。&lt;/p&gt;
 </description>
         </item>
         <item>

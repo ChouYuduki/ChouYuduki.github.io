@@ -8,6 +8,40 @@
         <language>en-us</language>
         <copyright>Yuduki&#39;s Blog</copyright>
         <lastBuildDate>Mon, 25 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Japanese Learing Notes</title>
+        <link>http://localhost:1313/p/japanese-learing-notes/</link>
+        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/japanese-learing-notes/</guid>
+        <description>&lt;p&gt;３つ　と　３つ目&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Nerf Source Code Explain</title>
+        <link>http://localhost:1313/p/nerf-source-code-explain/</link>
+        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/nerf-source-code-explain/</guid>
+        <description>&lt;h2 id=&#34;basic-conception&#34;&gt;Basic Conception
+&lt;/h2&gt;&lt;h3 id=&#34;neual-networks&#34;&gt;Neual Networks
+&lt;/h3&gt;&lt;p&gt;CNN, namely Convolutional(畳み込み) Neural Networks&lt;br&gt;
+for example, if you want to recognize an image &amp;ldquo;X&amp;rdquo;, you can change the image into matrix, then you can make three matrices
+$$\begin{bmatrix}-1 &amp;amp; -1 &amp;amp; 1\\ -1 &amp;amp; 1 &amp;amp; -1\\ 1 &amp;amp; -1 &amp;amp; -1 \end{bmatrix}$$
+$$\begin{bmatrix}1 &amp;amp; -1 &amp;amp; 1\\ -1 &amp;amp; 1 &amp;amp; -1\\ 1 &amp;amp; -1 &amp;amp; -1 \end{bmatrix}$$
+$$\begin{bmatrix}1 &amp;amp; -1 &amp;amp; -1\\ -1 &amp;amp; 1 &amp;amp; -1\\ -1 &amp;amp; -1 &amp;amp; 1 \end{bmatrix}$$&lt;/p&gt;
+&lt;p&gt;which have the specific feature of &amp;ldquo;X&amp;rdquo;, left-above, center, and right above.&lt;/p&gt;
+&lt;h3 id=&#34;sperical-harmonics&#34;&gt;Sperical harmonics
+&lt;/h3&gt;&lt;p&gt;It is a type of function expansion in 3D space. It is a basis fuction on a spherical surface, similar to how Fourier series perform an orthogonal expansion on a 1D interval.&lt;/p&gt;
+&lt;p&gt;spherical harmonics can indeed be seen as a &lt;strong&gt;3D basis function expansion:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$E = mc^2$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Polynomial expansion: Uses $x^3, x^2, x^1, x^0$ to construct polynomial basis functions.&lt;/li&gt;
+&lt;li&gt;Fourier expansion: Uses sine and cosine functions as basis functions.&lt;/li&gt;
+&lt;li&gt;Spherical harmonic expansion: Uses $Y_l^m(θ,ϕ)$ as basis functions for the surface of a sphere.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>ブックの感想ー記号学原理</title>
         <link>http://localhost:1313/p/%E3%83%96%E3%83%83%E3%82%AF%E3%81%AE%E6%84%9F%E6%83%B3%E3%83%BC%E8%A8%98%E5%8F%B7%E5%AD%A6%E5%8E%9F%E7%90%86/</link>
         <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
