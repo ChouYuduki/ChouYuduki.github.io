@@ -7,18 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Yuduki&#39;s Blog</copyright>
-        <lastBuildDate>Mon, 25 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Book Notes</title>
-        <link>http://localhost:1313/tags/book-notes/</link>
-        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/tags/book-notes/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Wed, 27 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Learning Notes</title>
         <link>http://localhost:1313/tags/learning-notes/</link>
-        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/tags/learning-notes/</guid>
         <description></description>
@@ -26,7 +18,7 @@
         <item>
         <title>Machine Learing</title>
         <link>http://localhost:1313/tags/machine-learing/</link>
-        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/tags/machine-learing/</guid>
         <description></description>
@@ -34,9 +26,17 @@
         <item>
         <title>Nerf</title>
         <link>http://localhost:1313/tags/nerf/</link>
-        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/tags/nerf/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Book Notes</title>
+        <link>http://localhost:1313/tags/book-notes/</link>
+        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tags/book-notes/</guid>
         <description></description>
         </item>
         <item>

@@ -7,30 +7,39 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Yuduki&#39;s Blog</copyright>
-        <lastBuildDate>Mon, 25 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/aigc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 27 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/aigc/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Nerf Source Code Explain</title>
         <link>http://localhost:1313/p/nerf-source-code-explain/</link>
-        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/p/nerf-source-code-explain/</guid>
         <description>&lt;h2 id=&#34;basic-conception&#34;&gt;Basic Conception
 &lt;/h2&gt;&lt;h3 id=&#34;neual-networks&#34;&gt;Neual Networks
 &lt;/h3&gt;&lt;p&gt;CNN, namely Convolutional(畳み込み) Neural Networks&lt;br&gt;
 for example, if you want to recognize an image &amp;ldquo;X&amp;rdquo;, you can change the image into matrix, then you can make three matrices
-$$
-\begin{bmatrix}
-a &amp;amp; b \
-c &amp;amp; d
-\end{bmatrix}&lt;/p&gt;
-&lt;p&gt;$$&lt;/p&gt;
+$$\begin{bmatrix}-1 &amp;amp; -1 &amp;amp; 1\\ -1 &amp;amp; 1 &amp;amp; -1\\ 1 &amp;amp; -1 &amp;amp; -1 \end{bmatrix}$$
+$$\begin{bmatrix}1 &amp;amp; -1 &amp;amp; 1\\ -1 &amp;amp; 1 &amp;amp; -1\\ 1 &amp;amp; -1 &amp;amp; -1 \end{bmatrix}$$
+$$\begin{bmatrix}1 &amp;amp; -1 &amp;amp; -1\\ -1 &amp;amp; 1 &amp;amp; -1\\ -1 &amp;amp; -1 &amp;amp; 1 \end{bmatrix}$$&lt;/p&gt;
 &lt;p&gt;which have the specific feature of &amp;ldquo;X&amp;rdquo;, left-above, center, and right above.&lt;/p&gt;
 &lt;h3 id=&#34;sperical-harmonics&#34;&gt;Sperical harmonics
 &lt;/h3&gt;&lt;p&gt;It is a type of function expansion in 3D space. It is a basis fuction on a spherical surface, similar to how Fourier series perform an orthogonal expansion on a 1D interval.&lt;/p&gt;
 &lt;p&gt;spherical harmonics can indeed be seen as a &lt;strong&gt;3D basis function expansion:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;$E = mc^2$&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Polynomial expansion: Uses x^3, x^2, x^1, x^0&lt;/li&gt;
+&lt;li&gt;Polynomial expansion: Uses $x^3, x^2, x^1, x^0$ to construct polynomial basis functions.&lt;/li&gt;
+&lt;li&gt;Fourier expansion: Uses sine and cosine functions as basis functions.&lt;/li&gt;
+&lt;li&gt;Spherical harmonic expansion: Uses $Y_l^m(θ,ϕ)$ as basis functions for the surface of a sphere.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;hierarchical-sampling&#34;&gt;Hierarchical Sampling
+&lt;/h3&gt;&lt;p&gt;Coarse(粗い) Network and　Fine(細い) Net.
+Coarse sample is uniform(一様) sampling, which cannot sapling points of edge very clearly and will lead to issues of wasted sampling points in empty spaces ineffectively. So after coarse sampling, there is a fine samling, which sample more points in rapidly changed place, like edge.&lt;/p&gt;
+&lt;h3 id=&#34;representing-a-3d-space-with-a-continuous-field&#34;&gt;Representing a 3D space with a continuous field
+&lt;/h3&gt;&lt;p&gt;Continuous Field: This is a mathematical concept representing a mapping function where every point $(x,y,z)$ is associated with a property or value.&lt;/p&gt;
+&lt;h3 id=&#34;camera&#34;&gt;Camera
+&lt;/h3&gt;&lt;p&gt;The &lt;strong&gt;position and orientation&lt;/strong&gt; of the camera are determined by its &lt;strong&gt;extrinsic matrix&lt;/strong&gt;, while the &lt;strong&gt;projection properties&lt;/strong&gt; are determined by its &lt;strong&gt;intrinsic matrix&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;extrinsic matrix is also called w2c(world-to-camera) matrix.&lt;/p&gt;
+&lt;p&gt;the inverse matrix(逆行列) of w2c is c2w matrix, which is widely used in Nerf.&lt;/p&gt;
+&lt;p&gt;the function of c2w is transform points from camera axis to world axis.&lt;/p&gt;
+&lt;p&gt;$$\begin{bmatrix} R &amp;amp; T\\ 0 &amp;amp; 1\end{bmatrix} = \begin{bmatrix} r11 &amp;amp; r12 &amp;amp; r13 &amp;amp; t1 \\ r21 &amp;amp; r22 &amp;amp; r23 &amp;amp; t2 \\ r31 &amp;amp; r32 &amp;amp; r33 &amp;amp; t3 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1  \end{bmatrix}$$&lt;/p&gt;
 </description>
         </item>
         <item>

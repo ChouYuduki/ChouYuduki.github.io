@@ -10,7 +10,7 @@
 <meta property='og:description' content="Basic Conception Neual Networks CNN, namely Convolutional(畳み込み) Neural Networks\nfor example, if you want to recognize an image &ldquo;X&rdquo;, you can change the image into matrix, then you can make three matrices $$\\begin{bmatrix}-1 &amp; -1 &amp; 1\\\\ -1 &amp; 1 &amp; -1\\\\ 1 &amp; -1 &amp; -1 \\end{bmatrix}$$ $$\\begin{bmatrix}1 &amp; -1 &amp; 1\\\\ -1 &amp; 1 &amp; -1\\\\ 1 &amp; -1 &amp; -1 \\end{bmatrix}$$ $$\\begin{bmatrix}1 &amp; -1 &amp; -1\\\\ -1 &amp; 1 &amp; -1\\\\ -1 &amp; -1 &amp; 1 \\end{bmatrix}$$\n">
 <meta property='og:url' content='http://localhost:1313/p/nerf-source-code-explain/'>
 <meta property='og:site_name' content='Yuduki&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Learning Notes' /><meta property='article:tag' content='Machine Learing' /><meta property='article:tag' content='Nerf' /><meta property='article:published_time' content='2024-11-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-25T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Learning Notes' /><meta property='article:tag' content='Machine Learing' /><meta property='article:tag' content='Nerf' /><meta property='article:published_time' content='2024-11-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-27T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Nerf Source Code Explain">
 <meta name="twitter:description" content="Basic Conception Neual Networks CNN, namely Convolutional(畳み込み) Neural Networks\nfor example, if you want to recognize an image &ldquo;X&rdquo;, you can change the image into matrix, then you can make three matrices $$\\begin{bmatrix}-1 &amp; -1 &amp; 1\\\\ -1 &amp; 1 &amp; -1\\\\ 1 &amp; -1 &amp; -1 \\end{bmatrix}$$ $$\\begin{bmatrix}1 &amp; -1 &amp; 1\\\\ -1 &amp; 1 &amp; -1\\\\ 1 &amp; -1 &amp; -1 \\end{bmatrix}$$ $$\\begin{bmatrix}1 &amp; -1 &amp; -1\\\\ -1 &amp; 1 &amp; -1\\\\ -1 &amp; -1 &amp; 1 \\end{bmatrix}$$\n">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -269,6 +269,9 @@
       <ol>
         <li><a href="#neual-networks">Neual Networks</a></li>
         <li><a href="#sperical-harmonics">Sperical harmonics</a></li>
+        <li><a href="#hierarchical-sampling">Hierarchical Sampling</a></li>
+        <li><a href="#representing-a-3d-space-with-a-continuous-field">Representing a 3D space with a continuous field</a></li>
+        <li><a href="#camera">Camera</a></li>
       </ol>
     </li>
   </ol>
@@ -320,7 +323,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 25, 2024</time>
+                <time class="article-time--published">Nov 27, 2024</time>
             </div>
         
 
@@ -335,7 +338,7 @@
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -361,12 +364,22 @@ $$\begin{bmatrix}1 &amp; -1 &amp; -1\\ -1 &amp; 1 &amp; -1\\ -1 &amp; -1 &amp; 1
 <h3 id="sperical-harmonics">Sperical harmonics
 </h3><p>It is a type of function expansion in 3D space. It is a basis fuction on a spherical surface, similar to how Fourier series perform an orthogonal expansion on a 1D interval.</p>
 <p>spherical harmonics can indeed be seen as a <strong>3D basis function expansion:</strong></p>
-<p>$E = mc^2$</p>
 <ul>
 <li>Polynomial expansion: Uses $x^3, x^2, x^1, x^0$ to construct polynomial basis functions.</li>
 <li>Fourier expansion: Uses sine and cosine functions as basis functions.</li>
 <li>Spherical harmonic expansion: Uses $Y_l^m(θ,ϕ)$ as basis functions for the surface of a sphere.</li>
 </ul>
+<h3 id="hierarchical-sampling">Hierarchical Sampling
+</h3><p>Coarse(粗い) Network and　Fine(細い) Net.
+Coarse sample is uniform(一様) sampling, which cannot sapling points of edge very clearly and will lead to issues of wasted sampling points in empty spaces ineffectively. So after coarse sampling, there is a fine samling, which sample more points in rapidly changed place, like edge.</p>
+<h3 id="representing-a-3d-space-with-a-continuous-field">Representing a 3D space with a continuous field
+</h3><p>Continuous Field: This is a mathematical concept representing a mapping function where every point $(x,y,z)$ is associated with a property or value.</p>
+<h3 id="camera">Camera
+</h3><p>The <strong>position and orientation</strong> of the camera are determined by its <strong>extrinsic matrix</strong>, while the <strong>projection properties</strong> are determined by its <strong>intrinsic matrix</strong>.</p>
+<p>extrinsic matrix is also called w2c(world-to-camera) matrix.</p>
+<p>the inverse matrix(逆行列) of w2c is c2w matrix, which is widely used in Nerf.</p>
+<p>the function of c2w is transform points from camera axis to world axis.</p>
+<p>$$\begin{bmatrix} R &amp; T\\ 0 &amp; 1\end{bmatrix} = \begin{bmatrix} r11 &amp; r12 &amp; r13 &amp; t1 \\ r21 &amp; r22 &amp; r23 &amp; t2 \\ r31 &amp; r32 &amp; r33 &amp; t3 \\ 0 &amp; 0 &amp; 0 &amp; 1  \end{bmatrix}$$</p>
 
 </section>
 
