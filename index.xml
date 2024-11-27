@@ -30,7 +30,7 @@ $$\begin{bmatrix}1 &amp;amp; -1 &amp;amp; -1\\ -1 &amp;amp; 1 &amp;amp; -1\\ -1 
 &lt;li&gt;Spherical harmonic expansion: Uses $Y_l^m(θ,ϕ)$ as basis functions for the surface of a sphere.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;hierarchical-sampling&#34;&gt;Hierarchical Sampling
-&lt;/h3&gt;&lt;p&gt;Coarse(粗い) Network and　Fine(細い) Net.
+&lt;/h3&gt;&lt;p&gt;Coarse(粗い) Network and Fine(細い) Net.
 Coarse sample is uniform(一様) sampling, which cannot sapling points of edge very clearly and will lead to issues of wasted sampling points in empty spaces ineffectively. So after coarse sampling, there is a fine samling, which sample more points in rapidly changed place, like edge.&lt;/p&gt;
 &lt;h3 id=&#34;representing-a-3d-space-with-a-continuous-field&#34;&gt;Representing a 3D space with a continuous field
 &lt;/h3&gt;&lt;p&gt;Continuous Field: This is a mathematical concept representing a mapping function where every point $(x,y,z)$ is associated with a property or value.&lt;/p&gt;
