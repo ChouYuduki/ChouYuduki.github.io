@@ -274,6 +274,7 @@
         <li><a href="#camera">Camera</a></li>
       </ol>
     </li>
+    <li><a href="#how-to-get-camera-parameters">How to Get Camera parameters</a></li>
   </ol>
 </nav>
         </div>
@@ -338,7 +339,7 @@
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    3 minute read
                 </time>
             </div>
         
@@ -377,9 +378,20 @@ Coarse sample is uniform(一様) sampling, which cannot sapling points of edge v
 <h3 id="camera">Camera
 </h3><p>The <strong>position and orientation</strong> of the camera are determined by its <strong>extrinsic matrix</strong>, while the <strong>projection properties</strong> are determined by its <strong>intrinsic matrix</strong>.</p>
 <p>extrinsic matrix is also called w2c(world-to-camera) matrix.</p>
+<hr>
 <p>the inverse matrix(逆行列) of w2c is c2w matrix, which is widely used in Nerf.</p>
 <p>the function of c2w is transform points from camera axis to world axis.</p>
 <p>$$\begin{bmatrix} R &amp; T\\ 0 &amp; 1\end{bmatrix} = \begin{bmatrix} r11 &amp; r12 &amp; r13 &amp; t1 \\ r21 &amp; r22 &amp; r23 &amp; t2 \\ r31 &amp; r32 &amp; r33 &amp; t3 \\ 0 &amp; 0 &amp; 0 &amp; 1  \end{bmatrix}$$</p>
+<hr>
+<p>the intrinsic matrix of camera K is below:</p>
+<p>$$\begin{bmatrix}f_x &amp; 0 &amp; c_x\\ 0 &amp; f_y &amp; c_y\\ 0 &amp; 0 &amp; 1 \end{bmatrix}$$</p>
+<p>$f_x$ and $f_y$ represent the vertical focal length and horizontal focal length</p>
+<h2 id="how-to-get-camera-parameters">How to Get Camera parameters
+</h2><p>In Nerf, Intrinsic and Extrinsic parameters should be given before you start, but how can we get these parameters?</p>
+<p>Well, there are two ways, the first way is using data from rendering software like blender.<br>
+The second way is using real data from our own real camera.</p>
+<p>there are some tech help us, such as COLMAP: <a class="link" href="https://colmap.github.io/"  target="_blank" rel="noopener"
+    >ColMap Link</a></p>
 
 </section>
 

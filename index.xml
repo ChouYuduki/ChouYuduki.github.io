@@ -37,9 +37,20 @@ Coarse sample is uniform(一様) sampling, which cannot sapling points of edge v
 &lt;h3 id=&#34;camera&#34;&gt;Camera
 &lt;/h3&gt;&lt;p&gt;The &lt;strong&gt;position and orientation&lt;/strong&gt; of the camera are determined by its &lt;strong&gt;extrinsic matrix&lt;/strong&gt;, while the &lt;strong&gt;projection properties&lt;/strong&gt; are determined by its &lt;strong&gt;intrinsic matrix&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;extrinsic matrix is also called w2c(world-to-camera) matrix.&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;the inverse matrix(逆行列) of w2c is c2w matrix, which is widely used in Nerf.&lt;/p&gt;
 &lt;p&gt;the function of c2w is transform points from camera axis to world axis.&lt;/p&gt;
 &lt;p&gt;$$\begin{bmatrix} R &amp;amp; T\\ 0 &amp;amp; 1\end{bmatrix} = \begin{bmatrix} r11 &amp;amp; r12 &amp;amp; r13 &amp;amp; t1 \\ r21 &amp;amp; r22 &amp;amp; r23 &amp;amp; t2 \\ r31 &amp;amp; r32 &amp;amp; r33 &amp;amp; t3 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1  \end{bmatrix}$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;the intrinsic matrix of camera K is below:&lt;/p&gt;
+&lt;p&gt;$$\begin{bmatrix}f_x &amp;amp; 0 &amp;amp; c_x\\ 0 &amp;amp; f_y &amp;amp; c_y\\ 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix}$$&lt;/p&gt;
+&lt;p&gt;$f_x$ and $f_y$ represent the vertical focal length and horizontal focal length&lt;/p&gt;
+&lt;h2 id=&#34;how-to-get-camera-parameters&#34;&gt;How to Get Camera parameters
+&lt;/h2&gt;&lt;p&gt;In Nerf, Intrinsic and Extrinsic parameters should be given before you start, but how can we get these parameters?&lt;/p&gt;
+&lt;p&gt;Well, there are two ways, the first way is using data from rendering software like blender.&lt;br&gt;
+The second way is using real data from our own real camera.&lt;/p&gt;
+&lt;p&gt;there are some tech help us, such as COLMAP: &lt;a class=&#34;link&#34; href=&#34;https://colmap.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ColMap Link&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
