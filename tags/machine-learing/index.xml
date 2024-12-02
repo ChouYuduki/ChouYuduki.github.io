@@ -50,7 +50,10 @@ Coarse sample is uniform(一様) sampling, which cannot sapling points of edge v
 &lt;p&gt;Well, there are two ways, the first way is using data from rendering software like blender.&lt;br&gt;
 The second way is using real data from our own real camera.&lt;/p&gt;
 &lt;p&gt;there are some tech help us, such as COLMAP: &lt;a class=&#34;link&#34; href=&#34;https://colmap.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;ColMap Link&lt;/a&gt;&lt;/p&gt;
+    &gt;ColMap Link&lt;/a&gt;, which is a sfm algorithm.&lt;/p&gt;
+&lt;p&gt;{{ &lt;quote&gt; }}&lt;/p&gt;
+&lt;p&gt;3DGS use colmap to initialize a point cloud&lt;/p&gt;
+&lt;p&gt;{{ &lt;/quote&gt; }}&lt;/p&gt;
 </description>
         </item>
         
