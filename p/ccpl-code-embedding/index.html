@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Hyper-Parameter Code in terminal: 1 2 3 4 5 6 7 8 9 10 11 python train_artistic.py \\ --source_path datasets/Furiren \\ --wikiartdir datasets/wikiart \\ --ckpt_path output/Furiren/feature/default/chkpnt/feature.pth \\ --style_weight 10 \\ --ccp_weight 5.0 \\ --num_s 8 \\ --num_l 3 \\ --tau 0.07 \\ --exp_name default And here is the original terminal parameters: 1 2 3 4 5 python train_artistic.py \\ -s datasets/train \\ --wikiartdir datasets/wikiart \\ --ckpt_path output/train/feature/default/chkpnt/feature.pth \\ --style_weight 10 ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Embedding Code 1. 确认 VGG 特征输出接口 在 train_artistic.py 中，本地使用的是 scene.VGG.VGGEncoder，vgg_encoder(x) 会返回一个包含 .relu1_1、.relu2_1、.relu3_1、.relu4_1 四个属性的对象train_artistic。这些正好对应 CCPL 需要的多层特征。\n2. 在文件开头导入 CCPL 在 train_artistic.py 顶部（紧跟其他 import 之后）加入：\ndiff Copy Edit from utils.loss_utils import cal_adain_style_loss, cal_mse_content_loss +from ccpl.net import CCPL, mlp 这里假设你已将 CCPL-main/net.py 里的 net.py 拷贝到 StyleGaussian/ccpl/net.py，并在项目根 init.py 中配置好 ccpl 包的导入路径。\n3. 在训练函数开头实例化 CCPL 找到 training(&hellip;) 函数开始部分，在创建 vgg_encoder 之后，加入：\n1 2 3 4 vgg_encoder = VGGEncoder().cuda() + # —— CCPL 初始化：mlp 是 net.py 中导出的 MLP 列表 + # num_s、num_l、tau 可从命令行参数传入 + ccpl_fn = CCPL(mlp=mlp).cuda() 4. 在训练主循环里计算 CCPL 找到如下位置：在渲染并计算完 content_loss 和 style_loss 之后train_artistic：\n">
 <title>CCPL Code Embedding</title>
 
 <link rel='canonical' href='https://ChouYuduki.github.io/p/ccpl-code-embedding/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="CCPL Code Embedding">
-<meta property='og:description' content="Hyper-Parameter Code in terminal: 1 2 3 4 5 6 7 8 9 10 11 python train_artistic.py \\ --source_path datasets/Furiren \\ --wikiartdir datasets/wikiart \\ --ckpt_path output/Furiren/feature/default/chkpnt/feature.pth \\ --style_weight 10 \\ --ccp_weight 5.0 \\ --num_s 8 \\ --num_l 3 \\ --tau 0.07 \\ --exp_name default And here is the original terminal parameters: 1 2 3 4 5 python train_artistic.py \\ -s datasets/train \\ --wikiartdir datasets/wikiart \\ --ckpt_path output/train/feature/default/chkpnt/feature.pth \\ --style_weight 10 ">
+<meta property='og:description' content="Embedding Code 1. 确认 VGG 特征输出接口 在 train_artistic.py 中，本地使用的是 scene.VGG.VGGEncoder，vgg_encoder(x) 会返回一个包含 .relu1_1、.relu2_1、.relu3_1、.relu4_1 四个属性的对象train_artistic。这些正好对应 CCPL 需要的多层特征。\n2. 在文件开头导入 CCPL 在 train_artistic.py 顶部（紧跟其他 import 之后）加入：\ndiff Copy Edit from utils.loss_utils import cal_adain_style_loss, cal_mse_content_loss +from ccpl.net import CCPL, mlp 这里假设你已将 CCPL-main/net.py 里的 net.py 拷贝到 StyleGaussian/ccpl/net.py，并在项目根 init.py 中配置好 ccpl 包的导入路径。\n3. 在训练函数开头实例化 CCPL 找到 training(&hellip;) 函数开始部分，在创建 vgg_encoder 之后，加入：\n1 2 3 4 vgg_encoder = VGGEncoder().cuda() + # —— CCPL 初始化：mlp 是 net.py 中导出的 MLP 列表 + # num_s、num_l、tau 可从命令行参数传入 + ccpl_fn = CCPL(mlp=mlp).cuda() 4. 在训练主循环里计算 CCPL 找到如下位置：在渲染并计算完 content_loss 和 style_loss 之后train_artistic：\n">
 <meta property='og:url' content='https://ChouYuduki.github.io/p/ccpl-code-embedding/'>
 <meta property='og:site_name' content='Yuduki&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='3DGaussian' /><meta property='article:published_time' content='2025-05-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-05-15T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="CCPL Code Embedding">
-<meta name="twitter:description" content="Hyper-Parameter Code in terminal: 1 2 3 4 5 6 7 8 9 10 11 python train_artistic.py \\ --source_path datasets/Furiren \\ --wikiartdir datasets/wikiart \\ --ckpt_path output/Furiren/feature/default/chkpnt/feature.pth \\ --style_weight 10 \\ --ccp_weight 5.0 \\ --num_s 8 \\ --num_l 3 \\ --tau 0.07 \\ --exp_name default And here is the original terminal parameters: 1 2 3 4 5 python train_artistic.py \\ -s datasets/train \\ --wikiartdir datasets/wikiart \\ --ckpt_path output/train/feature/default/chkpnt/feature.pth \\ --style_weight 10 ">
+<meta name="twitter:description" content="Embedding Code 1. 确认 VGG 特征输出接口 在 train_artistic.py 中，本地使用的是 scene.VGG.VGGEncoder，vgg_encoder(x) 会返回一个包含 .relu1_1、.relu2_1、.relu3_1、.relu4_1 四个属性的对象train_artistic。这些正好对应 CCPL 需要的多层特征。\n2. 在文件开头导入 CCPL 在 train_artistic.py 顶部（紧跟其他 import 之后）加入：\ndiff Copy Edit from utils.loss_utils import cal_adain_style_loss, cal_mse_content_loss +from ccpl.net import CCPL, mlp 这里假设你已将 CCPL-main/net.py 里的 net.py 拷贝到 StyleGaussian/ccpl/net.py，并在项目根 init.py 中配置好 ccpl 包的导入路径。\n3. 在训练函数开头实例化 CCPL 找到 training(&hellip;) 函数开始部分，在创建 vgg_encoder 之后，加入：\n1 2 3 4 vgg_encoder = VGGEncoder().cuda() + # —— CCPL 初始化：mlp 是 net.py 中导出的 MLP 列表 + # num_s、num_l、tau 可从命令行参数传入 + ccpl_fn = CCPL(mlp=mlp).cuda() 4. 在训练主循环里计算 CCPL 找到如下位置：在渲染并计算完 content_loss 和 style_loss 之后train_artistic：\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
         
@@ -254,6 +254,20 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
+    <li><a href="#embedding-code">Embedding Code</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#1-确认-vgg-特征输出接口">1. 确认 VGG 特征输出接口</a></li>
+            <li><a href="#2-在文件开头导入-ccpl">2. 在文件开头导入 CCPL</a></li>
+            <li><a href="#3-在训练函数开头实例化-ccpl">3. 在训练函数开头实例化 CCPL</a></li>
+            <li><a href="#4-在训练主循环里计算-ccpl">4. 在训练主循环里计算 CCPL</a></li>
+            <li><a href="#5-更新命令行参数解析">5. 更新命令行参数解析</a></li>
+            <li><a href="#6-确认其他训练脚本无需修改">6. 确认其他训练脚本无需修改</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
     <li><a href="#hyper-parameter-code">Hyper-Parameter Code</a>
       <ol>
         <li>
@@ -328,7 +342,7 @@
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    3 minute read
                 </time>
             </div>
         
@@ -343,7 +357,161 @@
     <section class="article-content">
     
     
-    <h2 id="hyper-parameter-code">Hyper-Parameter Code
+    <h2 id="embedding-code">Embedding Code
+</h2><h4 id="1-确认-vgg-特征输出接口">1. 确认 VGG 特征输出接口
+</h4><p>在 train_artistic.py 中，本地使用的是 scene.VGG.VGGEncoder，vgg_encoder(x) 会返回一个包含 .relu1_1、.relu2_1、.relu3_1、.relu4_1 四个属性的对象train_artistic。这些正好对应 CCPL 需要的多层特征。</p>
+<h4 id="2-在文件开头导入-ccpl">2. 在文件开头导入 CCPL
+</h4><p>在 train_artistic.py 顶部（紧跟其他 import 之后）加入：</p>
+<p>diff
+Copy
+Edit
+from utils.loss_utils import cal_adain_style_loss, cal_mse_content_loss
++from ccpl.net import CCPL, mlp
+这里假设你已将 CCPL-main/net.py 里的 net.py 拷贝到 StyleGaussian/ccpl/net.py，并在项目根 <strong>init</strong>.py 中配置好 ccpl 包的导入路径。</p>
+<h4 id="3-在训练函数开头实例化-ccpl">3. 在训练函数开头实例化 CCPL
+</h4><p>找到 training(&hellip;) 函数开始部分，在创建 vgg_encoder 之后，加入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">     vgg_encoder = VGGEncoder().cuda()
+</span></span><span class="line"><span class="cl"><span class="gi">+    # —— CCPL 初始化：mlp 是 net.py 中导出的 MLP 列表
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    #     num_s、num_l、tau 可从命令行参数传入
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    ccpl_fn = CCPL(mlp=mlp).cuda()
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="4-在训练主循环里计算-ccpl">4. 在训练主循环里计算 CCPL
+</h4><p>找到如下位置：在渲染并计算完 content_loss 和 style_loss 之后train_artistic：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">        <span class="c1"># style loss 和 content loss</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rendered_rgb_features</span> <span class="o">=</span> <span class="n">vgg_encoder</span><span class="p">(</span><span class="n">normalize_vgg</span><span class="p">(</span><span class="n">rendered_rgb</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">content_loss</span> <span class="o">=</span> <span class="n">cal_mse_content_loss</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">gt_image_features</span><span class="o">.</span><span class="n">relu4_1</span><span class="p">,</span> <span class="n">rendered_rgb_features</span><span class="o">.</span><span class="n">relu4_1</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">style_loss</span> <span class="o">=</span> <span class="mf">0.</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">style_feature</span><span class="p">,</span> <span class="n">image_feature</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">style_img_features</span><span class="p">,</span> <span class="n">rendered_rgb_features</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">style_loss</span> <span class="o">+=</span> <span class="n">cal_adain_style_loss</span><span class="p">(</span><span class="n">style_feature</span><span class="p">,</span> <span class="n">image_feature</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">loss</span> <span class="o">=</span> <span class="n">content_loss</span> <span class="o">+</span> <span class="n">style_loss</span> <span class="o">*</span> <span class="n">style_weight</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在这里插入 CCPL 计算：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">        # —— 在此处插入 CCPL
+</span></span><span class="line"><span class="cl"><span class="gi">+       # 将四层特征整理为列表，注意 q 是 stylized，k 是 content
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       feats_q = [
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           rendered_rgb_features.relu1_1,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           rendered_rgb_features.relu2_1,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           rendered_rgb_features.relu3_1,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           rendered_rgb_features.relu4_1,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       ]
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       feats_k = [
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           gt_image_features.relu1_1,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           gt_image_features.relu2_1,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           gt_image_features.relu3_1,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           gt_image_features.relu4_1,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       ]
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       # start_layer/end_layer 控制 CCPL 作用的层数，比如只用 relu2~4
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       end_layer = len(feats_q)  # 4
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       start_layer = end_layer - args.num_l  # 如果 num_l=3，则 start_layer=1 (relu2)
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       ccp_loss = ccpl_fn(
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           feats_q     = feats_q,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           feats_k     = feats_k,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           num_s       = args.num_s,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           start_layer = start_layer,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           end_layer   = end_layer,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           tau         = args.tau
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       )
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       # 将 CCPL 加权到总损失
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       loss = loss + args.ccp_weight * ccp_loss
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="5-更新命令行参数解析">5. 更新命令行参数解析
+</h4><p>在 if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;: 中的 parser.add_argument(&hellip;) 部分，添加：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">     parser.add_argument(&#34;--style_weight&#34;, type=float, default=10.)
+</span></span><span class="line"><span class="cl">     parser.add_argument(&#34;--content_preserve&#34;, action=&#39;store_true&#39;, default=False)
+</span></span><span class="line"><span class="cl"><span class="gi">+    parser.add_argument(&#34;--ccp_weight&#34;, type=float, default=5.0,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+                        help=&#34;weight for Contrastive Coherence Preserving Loss&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    parser.add_argument(&#34;--num_s&#34;, type=int, default=8,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+                        help=&#34;number of anchor samples per layer for CCPL&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    parser.add_argument(&#34;--num_l&#34;, type=int, default=3,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+                        help=&#34;number of layers to apply CCPL (e.g., 3 means relu2_1~relu4_1)&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    parser.add_argument(&#34;--tau&#34;, type=float, default=0.07,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+                        help=&#34;temperature for CCPL InfoNCE loss&#34;)
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="6-确认其他训练脚本无需修改">6. 确认其他训练脚本无需修改
+</h4><p>train_reconstruction.py 与 train_feature.py 仅负责重建和嵌入特征，不涉及风格迁移，不需要加 CCPL。</p>
+<p>高层 train.py 仅调度这三个阶段，也无需修改。</p>
+<p>总结
+确认位置：只要在 train_artistic.py 的风格化训练循环里计算内容／风格损失后，立即调用 CCPL 并加权即可。</p>
+<p>检查对齐：所用 VGG 层 .relu1_1 ~ .relu4_1 与 CCPL 多层输入完全吻合。</p>
+<p>参数可控：通过新增的命令行参数可以方便地调节 CCPL 的强度、层数、采样数和温度。</p>
+<p>按照上面的步骤修改并运行，相信你就能在现有的 StyleGaussian 风格化训练流程里，正确地融入 CCPL，提升多视图和视频输出的一致性与稳定性。</p>
+<h2 id="hyper-parameter-code">Hyper-Parameter Code
 </h2><h4 id="in-terminal">in terminal:
 </h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
