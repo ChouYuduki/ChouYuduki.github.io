@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="最新バーションのGaussian Splattingのエラー：\n1 TypeError: GaussianRasterizationSettings.__new__() missing 1 required positional argument: &#39;antialiasing&#39; このエラーに対して： gaussian_renderer/int.pyのコードにこれを加えて： antialiasing=True\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 raster_settings = GaussianRasterizationSettings( image_height=int(data[&#39;novel_view&#39;][&#39;height&#39;][idx]), image_width=int(data[&#39;novel_view&#39;][&#39;width&#39;][idx]), tanfovx=tanfovx, tanfovy=tanfovy, bg=bg_color, scale_modifier=1.0, viewmatrix=data[&#39;novel_view&#39;][&#39;world_view_transform&#39;][idx], projmatrix=data[&#39;novel_view&#39;][&#39;full_proj_transform&#39;][idx], sh_degree=3, campos=data[&#39;novel_view&#39;][&#39;camera_center&#39;][idx], prefiltered=False, debug=False， **antialiasing=True** 出力データも改正すべき、もう一つ_を加えて：\n1 rendered_image, radii, _ = rasterizer( ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="最新版のGaussian Splattingでのエラー：\n1 TypeError: GaussianRasterizationSettings.__new__() missing 1 required positional argument: &#39;antialiasing&#39; それはモデルの更新によるものです。\n解決方法 このエラーを解決するには：\ngaussian_renderer/int.pyのコードにantialiasing=Trueを増加してください：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 raster_settings = GaussianRasterizationSettings( image_height=int(data[&#39;novel_view&#39;][&#39;height&#39;][idx]), image_width=int(data[&#39;novel_view&#39;][&#39;width&#39;][idx]), tanfovx=tanfovx, tanfovy=tanfovy, bg=bg_color, scale_modifier=1.0, viewmatrix=data[&#39;novel_view&#39;][&#39;world_view_transform&#39;][idx], projmatrix=data[&#39;novel_view&#39;][&#39;full_proj_transform&#39;][idx], sh_degree=3, campos=data[&#39;novel_view&#39;][&#39;camera_center&#39;][idx], prefiltered=False, debug=False， **antialiasing=True** 出力データも修正すべき：\n1 rendered_image, radii, _ = rasterizer( ">
 <title>Newest 3DGS Init Error</title>
 
 <link rel='canonical' href='http://localhost:1313/p/newest-3dgs-init-error/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Newest 3DGS Init Error">
-<meta property='og:description' content="最新バーションのGaussian Splattingのエラー：\n1 TypeError: GaussianRasterizationSettings.__new__() missing 1 required positional argument: &#39;antialiasing&#39; このエラーに対して： gaussian_renderer/int.pyのコードにこれを加えて： antialiasing=True\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 raster_settings = GaussianRasterizationSettings( image_height=int(data[&#39;novel_view&#39;][&#39;height&#39;][idx]), image_width=int(data[&#39;novel_view&#39;][&#39;width&#39;][idx]), tanfovx=tanfovx, tanfovy=tanfovy, bg=bg_color, scale_modifier=1.0, viewmatrix=data[&#39;novel_view&#39;][&#39;world_view_transform&#39;][idx], projmatrix=data[&#39;novel_view&#39;][&#39;full_proj_transform&#39;][idx], sh_degree=3, campos=data[&#39;novel_view&#39;][&#39;camera_center&#39;][idx], prefiltered=False, debug=False， **antialiasing=True** 出力データも改正すべき、もう一つ_を加えて：\n1 rendered_image, radii, _ = rasterizer( ">
+<meta property='og:description' content="最新版のGaussian Splattingでのエラー：\n1 TypeError: GaussianRasterizationSettings.__new__() missing 1 required positional argument: &#39;antialiasing&#39; それはモデルの更新によるものです。\n解決方法 このエラーを解決するには：\ngaussian_renderer/int.pyのコードにantialiasing=Trueを増加してください：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 raster_settings = GaussianRasterizationSettings( image_height=int(data[&#39;novel_view&#39;][&#39;height&#39;][idx]), image_width=int(data[&#39;novel_view&#39;][&#39;width&#39;][idx]), tanfovx=tanfovx, tanfovy=tanfovy, bg=bg_color, scale_modifier=1.0, viewmatrix=data[&#39;novel_view&#39;][&#39;world_view_transform&#39;][idx], projmatrix=data[&#39;novel_view&#39;][&#39;full_proj_transform&#39;][idx], sh_degree=3, campos=data[&#39;novel_view&#39;][&#39;camera_center&#39;][idx], prefiltered=False, debug=False， **antialiasing=True** 出力データも修正すべき：\n1 rendered_image, radii, _ = rasterizer( ">
 <meta property='og:url' content='http://localhost:1313/p/newest-3dgs-init-error/'>
 <meta property='og:site_name' content='Yuduki&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='3DGaussian' /><meta property='article:published_time' content='2025-07-07T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-07-07T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Newest 3DGS Init Error">
-<meta name="twitter:description" content="最新バーションのGaussian Splattingのエラー：\n1 TypeError: GaussianRasterizationSettings.__new__() missing 1 required positional argument: &#39;antialiasing&#39; このエラーに対して： gaussian_renderer/int.pyのコードにこれを加えて： antialiasing=True\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 raster_settings = GaussianRasterizationSettings( image_height=int(data[&#39;novel_view&#39;][&#39;height&#39;][idx]), image_width=int(data[&#39;novel_view&#39;][&#39;width&#39;][idx]), tanfovx=tanfovx, tanfovy=tanfovy, bg=bg_color, scale_modifier=1.0, viewmatrix=data[&#39;novel_view&#39;][&#39;world_view_transform&#39;][idx], projmatrix=data[&#39;novel_view&#39;][&#39;full_proj_transform&#39;][idx], sh_degree=3, campos=data[&#39;novel_view&#39;][&#39;camera_center&#39;][idx], prefiltered=False, debug=False， **antialiasing=True** 出力データも改正すべき、もう一つ_を加えて：\n1 rendered_image, radii, _ = rasterizer( ">
+<meta name="twitter:description" content="最新版のGaussian Splattingでのエラー：\n1 TypeError: GaussianRasterizationSettings.__new__() missing 1 required positional argument: &#39;antialiasing&#39; それはモデルの更新によるものです。\n解決方法 このエラーを解決するには：\ngaussian_renderer/int.pyのコードにantialiasing=Trueを増加してください：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 raster_settings = GaussianRasterizationSettings( image_height=int(data[&#39;novel_view&#39;][&#39;height&#39;][idx]), image_width=int(data[&#39;novel_view&#39;][&#39;width&#39;][idx]), tanfovx=tanfovx, tanfovy=tanfovy, bg=bg_color, scale_modifier=1.0, viewmatrix=data[&#39;novel_view&#39;][&#39;world_view_transform&#39;][idx], projmatrix=data[&#39;novel_view&#39;][&#39;full_proj_transform&#39;][idx], sh_degree=3, campos=data[&#39;novel_view&#39;][&#39;camera_center&#39;][idx], prefiltered=False, debug=False， **antialiasing=True** 出力データも修正すべき：\n1 rendered_image, radii, _ = rasterizer( ">
     <link rel="shortcut icon" href="/favicon.ico" />
 
         
@@ -232,7 +232,42 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#解決方法">解決方法</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -303,7 +338,7 @@
     <section class="article-content">
     
     
-    <p><strong>最新バーションのGaussian Splattingのエラー：</strong></p>
+    <p><strong>最新版のGaussian Splattingでのエラー：</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -312,9 +347,11 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TypeError: GaussianRasterizationSettings.__new__() missing 1 required positional argument: &#39;antialiasing&#39;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>このエラーに対して：
-gaussian_renderer/int.pyのコードにこれを加えて：
-antialiasing=True</p>
+</div><p>それはモデルの更新によるものです。</p>
+<hr>
+<h3 id="解決方法">解決方法
+</h3><p>このエラーを解決するには：<br>
+<code>gaussian_renderer/int.py</code>のコードに<code>antialiasing=True</code>を増加してください：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -349,7 +386,7 @@ antialiasing=True</p>
 </span></span><span class="line"><span class="cl"><span class="o">**</span><span class="n">antialiasing</span><span class="o">=</span><span class="kc">True</span><span class="o">**</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>出力データも改正すべき、もう一つ_を加えて：</p>
+</div><p>出力データも修正すべき：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
