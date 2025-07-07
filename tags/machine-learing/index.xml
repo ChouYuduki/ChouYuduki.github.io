@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Machine Learing on Yuduki&#39;s Blog</title>
-        <link>https://ChouYuduki.github.io/tags/machine-learing/</link>
+        <link>http://localhost:1313/tags/machine-learing/</link>
         <description>Recent content in Machine Learing on Yuduki&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Yuduki&#39;s Blog</copyright>
-        <lastBuildDate>Wed, 27 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ChouYuduki.github.io/tags/machine-learing/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 27 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/machine-learing/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Nerf Source Code Explain</title>
-        <link>https://ChouYuduki.github.io/p/nerf-source-code-explain/</link>
+        <link>http://localhost:1313/p/nerf-source-code-explain/</link>
         <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://ChouYuduki.github.io/p/nerf-source-code-explain/</guid>
+        <guid>http://localhost:1313/p/nerf-source-code-explain/</guid>
         <description>&lt;h2 id=&#34;basic-conception&#34;&gt;Basic Conception
 &lt;/h2&gt;&lt;h3 id=&#34;neual-networks&#34;&gt;Neual Networks
 &lt;/h3&gt;&lt;p&gt;CNN, namely Convolutional(畳み込み) Neural Networks&lt;br&gt;

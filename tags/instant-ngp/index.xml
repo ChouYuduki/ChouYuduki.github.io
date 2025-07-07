@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Instant-Ngp on Yuduki&#39;s Blog</title>
-        <link>https://ChouYuduki.github.io/tags/instant-ngp/</link>
+        <link>http://localhost:1313/tags/instant-ngp/</link>
         <description>Recent content in Instant-Ngp on Yuduki&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Yuduki&#39;s Blog</copyright>
-        <lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ChouYuduki.github.io/tags/instant-ngp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/instant-ngp/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>How To Config Instant-ngp</title>
-        <link>https://ChouYuduki.github.io/p/how-to-config-instant-ngp/</link>
+        <link>http://localhost:1313/p/how-to-config-instant-ngp/</link>
         <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://ChouYuduki.github.io/p/how-to-config-instant-ngp/</guid>
+        <guid>http://localhost:1313/p/how-to-config-instant-ngp/</guid>
         <description>&lt;p&gt;&lt;strong&gt;all of operations below are just tested in Ubuntu Env of my Personal Computer&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1-install-nvidia-driver--anaconda&#34;&gt;1. Install Nvidia Driver &amp;amp;&amp;amp; Anaconda
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
