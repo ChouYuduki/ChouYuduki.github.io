@@ -9,11 +9,11 @@
         <copyright>Yuduki&#39;s Blog</copyright>
         <lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>転載</title>
-        <link>http://localhost:1313/categories/%E8%BB%A2%E8%BC%89/</link>
+        <link>http://localhost:1313/categories/repost/</link>
         <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/%E8%BB%A2%E8%BC%89/</guid>
-        <description></description>
+        <guid>http://localhost:1313/categories/repost/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/repost/JiRai.jpg" alt="Featured image of post 転載" /&gt;</description>
         </item>
         <item>
         <title>AIGC</title>
@@ -21,14 +21,6 @@
         <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/categories/aigc/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>生活</title>
-        <link>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB/</link>
-        <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB/</guid>
         <description></description>
         </item>
         <item>
@@ -53,14 +45,6 @@
         <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/categories/linux/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Repost</title>
-        <link>http://localhost:1313/categories/repost/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/repost/</guid>
         <description></description>
         </item>
         
