@@ -926,16 +926,56 @@
         <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/about/</guid>
-        <description>&lt;p&gt;中国🇨🇳出身、日本国籍🎌取得に向けて努力中&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;履歴&lt;/strong&gt;&lt;br&gt;
-東京勤務予定 ( 2027.04 -  )&lt;br&gt;&lt;/p&gt;
+        <description>&lt;p&gt;中国🇨🇳出身、日本国籍🎌取得に向けて努力中&lt;br&gt;
+中国の田舎で高校卒業まで（19年）➡️ 上海で大学（4年）➡️ 福岡で大学院（2年）➡️ 東京在住&lt;br&gt;
+幼い頃から日本のアニメに夢中になり、日本語を独学で学んできました&lt;/p&gt;
+&lt;h2 id=&#34;履歴&#34;&gt;&lt;strong&gt;履歴&lt;/strong&gt;&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;◽️東京勤務予定 ( 2027.04 -  )&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;◽️&lt;strong&gt;九州大学&lt;/strong&gt; ( 2025.04 - 2027.03 )&lt;br&gt;
 　&lt;em&gt;修士　芸術工学　GPA: 3.9/4.0&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;◽️&lt;strong&gt;上海大学&lt;/strong&gt; ( 2020.09 - 2024.06 )&lt;br&gt;
-　&lt;em&gt;学部　Computer Science　GPA: 3.5/4.0&lt;/em&gt;&lt;/p&gt;
+　&lt;em&gt;学部　情報工学　GPA: 3.5/4.0&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;────────&lt;/p&gt;
-&lt;p&gt;好きなアニメ作品：&lt;a class=&#34;link&#34; href=&#34;https://ja.wikipedia.org/wiki/WHITE_ALBUM&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&lt;strong&gt;WHITE ALBUM&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;好きなもの&#34;&gt;&lt;strong&gt;好きなもの&lt;/strong&gt;&lt;br&gt;
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;ノベルゲーム&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/about/galgame.jpg&#34;
+	width=&#34;425&#34;
+	height=&#34;399&#34;
+	srcset=&#34;http://localhost:1313/about/galgame_hu_4fd4ac04ec76eaff.jpg 480w, http://localhost:1313/about/galgame_hu_b38d2834cf8221f0.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;秋葉原　ゆずソフト&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;106&#34;
+		data-flex-basis=&#34;255px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;ライブ巡り&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/about/band.jpg&#34;
+	width=&#34;425&#34;
+	height=&#34;362&#34;
+	srcset=&#34;http://localhost:1313/about/band_hu_e0bcb1baa62c6bd1.jpg 480w, http://localhost:1313/about/band_hu_ea24d6d764289b90.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;上海　辻詩音&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;117&#34;
+		data-flex-basis=&#34;281px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;来日留学の契機の一つ：ビリギャル&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&#34;display:flex; gap:10px;&#34;&gt;
+  &lt;img src=&#34;1.PNG&#34; width=&#34;48%&#34;&gt;
+  &lt;img src=&#34;2.PNG&#34; width=&#34;48%&#34;&gt;
+&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -1403,21 +1443,6 @@ The second way is using real data from our own real camera.&lt;/p&gt;
 &lt;p&gt;{{ &lt;quote&gt; }}&lt;/p&gt;
 &lt;p&gt;3DGS use colmap to initialize a point cloud&lt;/p&gt;
 &lt;p&gt;{{ &lt;/quote&gt; }}&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>ブックの感想ー記号学原理</title>
-        <link>http://localhost:1313/p/%E3%83%96%E3%83%83%E3%82%AF%E3%81%AE%E6%84%9F%E6%83%B3%E3%83%BC%E8%A8%98%E5%8F%B7%E5%AD%A6%E5%8E%9F%E7%90%86/</link>
-        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/p/%E3%83%96%E3%83%83%E3%82%AF%E3%81%AE%E6%84%9F%E6%83%B3%E3%83%BC%E8%A8%98%E5%8F%B7%E5%AD%A6%E5%8E%9F%E7%90%86/</guid>
-        <description>&lt;p&gt;記号学はさまざまな学問と関係があります。特にゲシュタルト心理学において、この学問は一つの図形のように個々の要素の総和以上のまとまりのある形態をゲシュタルトという。&lt;/p&gt;
-&lt;h3 id=&#34;第一章だいいっしょう&#34;&gt;第一章(だいいっしょう)
-&lt;/h3&gt;&lt;p&gt;記号学&lt;strong&gt;における&lt;/strong&gt;ゼロ記号とは、表面的には「何もない」ように見えても、文脈や他の記号との関係性において強い意味を持つことがあります。&lt;br&gt;
-例えば、空白、暗闇、静かさ、無味など。&lt;/p&gt;
-&lt;p&gt;記号は「物源」に基づいて３つに分けられることがわかります。&lt;br&gt;
-１つ目は自然の事物、２つ目は人間が製造した器物、３つ目は人間が製造した「純粋な記号」であり、言語、芸術、表情、姿勢など。&lt;/p&gt;
-&lt;p&gt;記号が表す意味は単なる「生成過程」(becoming)にすぎません。一旦意味が現れると、記号は終わり、さらにその意味も消失してしまいます。&lt;/p&gt;
 </description>
         </item>
         <item>
