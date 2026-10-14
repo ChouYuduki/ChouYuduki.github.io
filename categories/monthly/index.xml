@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Monthly on Yuduki&#39;s Blog</title>
+        <link>http://localhost:1313/categories/monthly/</link>
+        <description>Recent content in Monthly on Yuduki&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Yuduki&#39;s Blog</copyright>
+        <lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/monthly/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【月報】開始準備第二新卒的第一步2026.10</title>
+        <link>http://localhost:1313/p/%E6%9C%88%E5%A0%B1%E9%96%8B%E5%A7%8B%E6%BA%96%E5%82%99%E7%AC%AC%E4%BA%8C%E6%96%B0%E5%8D%92%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A52026.10/</link>
+        <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/%E6%9C%88%E5%A0%B1%E9%96%8B%E5%A7%8B%E6%BA%96%E5%82%99%E7%AC%AC%E4%BA%8C%E6%96%B0%E5%8D%92%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A52026.10/</guid>
+        <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに
+&lt;/h1&gt;&lt;p&gt;目前是2026年10月，距離新卒內定式過去了一週多的時間，也意味著自己目前將進入日本職場。&lt;br&gt;
+只是目前自己對於這份內定真的不是很滿意，準備開始轉職。&lt;/p&gt;
+&lt;h1 id=&#34;準備轉職的理由&#34;&gt;準備轉職的理由
+&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;必須在一年目立刻轉職的理由。目前內定公司是一家大手Sler的很小的子會社，屬於二次受託，在這種純配屬gacha的地方，待的時間久了，只會被分到各種各樣的現場中不斷從頭開始學淺顯的技術，技術棧的積累會很雜，和自己當初的設想完全不同。&lt;/li&gt;
+&lt;li&gt;新卒選擇的錯誤。自己新卒選擇這家公司是看到公司說明會上說具有敏捷開發、最先端のai項目等最新的project，實際參加內定活動後發現，公司內部的技術非常傳統，員工對於ai的理解不是改造ai而是怎麼使用ai，自己覺得很難在這種環境中實在無法進步。&lt;/li&gt;
+&lt;li&gt;公司的構成。這家公司80%以上都是華人，和自己理解的日本職場有很大偏差。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;即將做的準備&#34;&gt;即將做的準備
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;1. 必要的證書&lt;/strong&gt;&lt;br&gt;
+在查閱相關情報，和其他轉職者確認信息後，本人打算在第二新卒轉職前取得以下證書：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基本情報技術者&lt;/li&gt;
+&lt;li&gt;應用情報技術者&lt;/li&gt;
+&lt;li&gt;AWS SAA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. 定期更新的技術blog&lt;/strong&gt;&lt;br&gt;
+這也是我目前正在做的事情，作為求職者的學習的心態的展示，也是幫助自己總結思路&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. ポートフォリオ作成&lt;/strong&gt;&lt;br&gt;
+這部分本人目前打算結合agent，aws，&lt;/p&gt;
+&lt;h1 id=&#34;現時点やってること&#34;&gt;現時点やってること
+&lt;/h1&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
