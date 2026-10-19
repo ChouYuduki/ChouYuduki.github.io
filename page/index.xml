@@ -13,56 +13,81 @@
         <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/about/</guid>
-        <description>&lt;p&gt;中国🇨🇳出身、日本国籍🎌取得に向けて努力中&lt;br&gt;
-中国の田舎で高校卒業まで（19年）➡️ 上海で大学（4年）➡️ 福岡で大学院（2年）➡️ 東京在住&lt;br&gt;
-幼い頃から日本のアニメに夢中になり、日本語を独学で学んできました&lt;/p&gt;
+        <description>&lt;h2 id=&#34;about-me&#34;&gt;About me
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;🇨🇳 中国出身 ／ 🇯🇵 永住権 → 日本国籍の取得を目指して努力中&lt;/li&gt;
+&lt;li&gt;🎌 幼い頃から日本のアニメに夢中になり、日本語を独学で習得&lt;/li&gt;
+&lt;li&gt;中国の田舎（高校卒業まで19年）➡️ 上海（4年）➡️ 福岡（2年）➡️ 東京&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;履歴&#34;&gt;&lt;strong&gt;履歴&lt;/strong&gt;&lt;br&gt;
-&lt;/h2&gt;&lt;p&gt;◽️東京勤務予定 ( 2027.04 -  )&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;◽️&lt;strong&gt;九州大学&lt;/strong&gt; ( 2025.04 - 2027.03 )&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;⚪ 東京勤務予定 ( 2027.04 -  )&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;⚪ &lt;strong&gt;九州大学&lt;/strong&gt; ( 2025.04 - 2027.03 )&lt;br&gt;
 　&lt;em&gt;修士　芸術工学　GPA: 3.9/4.0&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;◽️&lt;strong&gt;上海大学&lt;/strong&gt; ( 2020.09 - 2024.06 )&lt;br&gt;
+&lt;p&gt;⚪ &lt;strong&gt;上海大学&lt;/strong&gt; ( 2020.09 - 2024.06 )&lt;br&gt;
 　&lt;em&gt;学部　情報工学　GPA: 3.5/4.0&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;skills&#34;&gt;Skills
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🇨🇳 中国語　ネイティブ
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🇯🇵 日本語　ビジネスレベル
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🇬🇧 英語　　日常会話・論文読解
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;分野&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;スキル&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;言語&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Python / C++ / C#&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;CG・研究&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3D Gaussian Splatting / PyTorch / CUDA&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ツール&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Git / Docker / Linux&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;クラウド&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AWS（SAA 取得予定）&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;新卒一年目目標&#34;&gt;新卒一年目目標
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;目標&lt;/th&gt;
+          &lt;th&gt;状態&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;基本情報&lt;/td&gt;
+          &lt;td&gt;🟡 進行中&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;応用情報&lt;/td&gt;
+          &lt;td&gt;⬜ 予定&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;AWS SAA&lt;/td&gt;
+          &lt;td&gt;⬜ 予定&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;────────&lt;/p&gt;
-&lt;h2 id=&#34;好きなもの&#34;&gt;&lt;strong&gt;好きなもの&lt;/strong&gt;&lt;br&gt;
-&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;ノベルゲーム&lt;br&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/about/galgame.jpg&#34;
-	width=&#34;425&#34;
-	height=&#34;399&#34;
-	srcset=&#34;http://localhost:1313/about/galgame_hu_4fd4ac04ec76eaff.jpg 480w, http://localhost:1313/about/galgame_hu_b38d2834cf8221f0.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;秋葉原　ゆずソフト&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;106&#34;
-		data-flex-basis=&#34;255px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;ライブ巡り&lt;br&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/about/band.jpg&#34;
-	width=&#34;425&#34;
-	height=&#34;362&#34;
-	srcset=&#34;http://localhost:1313/about/band_hu_e0bcb1baa62c6bd1.jpg 480w, http://localhost:1313/about/band_hu_ea24d6d764289b90.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;上海　辻詩音&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;117&#34;
-		data-flex-basis=&#34;281px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;来日留学の契機の一つ：ビリギャル&lt;/strong&gt;&lt;/p&gt;
-&lt;p style=&#34;display:flex; gap:10px;&#34;&gt;
-  &lt;img src=&#34;1.PNG&#34; width=&#34;48%&#34;&gt;
-  &lt;img src=&#34;2.PNG&#34; width=&#34;48%&#34;&gt;
-&lt;/p&gt;
 </description>
         </item>
         <item>

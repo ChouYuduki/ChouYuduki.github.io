@@ -3,10 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-10-14T18:08:06+09:00</lastmod>
+    <lastmod>2026-10-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/2026-deep-into-inference/</loc>
+    <lastmod>2026-10-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/agent/</loc>
+    <lastmod>2026-10-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-10-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2026-10-14T18:08:06+09:00</lastmod>
+    <lastmod>2026-10-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/agentwhat-is-rag/</loc>
+    <lastmod>2026-10-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2026-10-14T00:00:00+00:00</lastmod>
@@ -17,14 +29,8 @@
     <loc>http://localhost:1313/p/%E8%BB%A2%E8%BC%89%E6%9C%AA%E7%B5%8C%E9%A8%93%E3%82%B8%E3%83%A5%E3%83%8B%E3%82%A2%E5%B1%A4%E5%90%91%E3%81%91-%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E9%9D%A2%E6%8E%A5%E5%AF%BE%E7%AD%96/</loc>
     <lastmod>2026-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-10-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/repost/</loc>
     <lastmod>2026-10-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/p/%EF%BC%91%E3%83%B6%E6%9C%881000%E4%B8%87%E9%A0%82%E3%81%8F%E9%A0%82%E3%81%8D%E5%A5%B3%E5%AD%90%E3%82%8A%E3%82%8A%E3%81%A1%E3%82%83%E3%82%93%E3%81%AE%E3%81%BF%E3%82%93%E3%81%AA%E3%82%92%E7%A8%BC%E3%81%8C%E3%81%9B%E3%82%8B%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB/</loc>
-    <lastmod>2026-04-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/3dgaussian/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>

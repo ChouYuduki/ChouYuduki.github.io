@@ -7,7 +7,50 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Yuduki&#39;s Blog</copyright>
-        <lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 17 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【Agent】What is RAG</title>
+        <link>http://localhost:1313/p/agentwhat-is-rag/</link>
+        <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/agentwhat-is-rag/</guid>
+        <description>&lt;h1 id=&#34;rag-とは&#34;&gt;RAG とは
+&lt;/h1&gt;&lt;p&gt;RAG(Retrieval-Augmented Generation, 検索拡張生成) は、LLMに外部の情報を組み合わせることで、LLMモデルの出力の質を向上させる手法です。  　　
+外部の情報としては、主に次のようなものが使われます。　　&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;独自に用意した資料（例：自動車の整備マニュアル、製品の取扱説明書、カスタマーサポートのFAQ、社内文書など）&lt;/li&gt;
+&lt;li&gt;Web検索で取得した情報&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;RAGでは、外部のデータソースから関連する情報を検索し、ユーザーの質問と一緒にLLMへ入力します。これにより、出力の正確性と信頼性が向上します。&lt;/p&gt;
+&lt;h1 id=&#34;ragのメリット&#34;&gt;RAGのメリット
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Reduce Hallucinations (ハルシネーション)&lt;/li&gt;
+&lt;li&gt;Provide current or domain-specific information&lt;/li&gt;
+&lt;li&gt;Being efficient and cost-effective (fine-tuning is costive)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;the-steps-of-rag&#34;&gt;the steps of RAG
+&lt;/h1&gt;&lt;p&gt;Knowledge Base -&amp;gt; Split into Text chunks -&amp;gt; change into Vectors by embedding model -&amp;gt; storage into Vector Database -&amp;gt; retrieve&lt;/p&gt;
+&lt;p&gt;Un-structured Data (image, video, etc.) convert to Vector, then can be storaged into Vector Database, for managing and storaging&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;embedding model e.g.: text-embedding-3-large by OpenAI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;traditional-database-vs-vector-database&#34;&gt;Traditional Database VS Vector Database
+&lt;/h1&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Traditional Database&lt;/th&gt;
+          &lt;th&gt;Vector Database&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;For Un-structured Data&lt;/td&gt;
+          &lt;td&gt;For structured Data&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
         <title>About</title>
         <link>http://localhost:1313/about/</link>
         <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
