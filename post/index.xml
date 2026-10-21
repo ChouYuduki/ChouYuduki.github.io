@@ -7,59 +7,50 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Yuduki&#39;s Blog</copyright>
-        <lastBuildDate>Mon, 19 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>2026 Deep Into Inference</title>
-        <link>http://localhost:1313/p/2026-deep-into-inference/</link>
-        <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+        <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【Agent】 Deep Into Inference</title>
+        <link>http://localhost:1313/p/agent-deep-into-inference/</link>
+        <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/2026-deep-into-inference/</guid>
-        <description>&lt;h1 id=&#34;大模型推理參數inference-parameters入門&#34;&gt;大模型推理參數（Inference Parameters）入門
-&lt;/h1&gt;&lt;p&gt;呼叫大型語言模型（LLM）時，可以透過一組&lt;strong&gt;推理參數&lt;/strong&gt;調整模型「如何生成文字」。這些參數不會改變模型本身的知識或能力，只影響輸出的風格、長度與穩定性。&lt;/p&gt;
+        <guid>http://localhost:1313/p/agent-deep-into-inference/</guid>
+        <description>&lt;p&gt;呼叫大型語言模型（LLM）時，可以透過一組&lt;strong&gt;推理參數&lt;/strong&gt;調整模型「如何生成文字」。這些參數不會改變模型本身的知識或能力，只影響輸出的風格、長度與穩定性。&lt;/p&gt;
 &lt;p&gt;可以在 Playground（例如 AWS Bedrock 控制台）用滑桿調整，也可以在 API 呼叫中直接傳入。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;背景模型是怎麼生成文字的&#34;&gt;背景：模型是怎麼生成文字的？
-&lt;/h2&gt;&lt;p&gt;LLM 是&lt;strong&gt;逐個 token 生成&lt;/strong&gt;的。每一步，模型都會為所有候選 token 計算一個機率分布，然後從中選出一個，接在已生成的文字後面，再繼續下一步。&lt;/p&gt;
+&lt;h1 id=&#34;backgroundhow-the-llm-model-generates-words&#34;&gt;Background：how the LLM model generates words?
+&lt;/h1&gt;&lt;p&gt;LLM is &lt;strong&gt;token by token&lt;/strong&gt; generating the words. 每一步，模型都會為所有候選 token 計算一個機率分布，然後從中選出一個，接在已生成的文字後面，再繼續下一步。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;輸入：「今天天氣很」
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;候選：好(45%)、熱(25%)、冷(15%)、糟(8%)、藍(0.1%)…
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;入力：「今日の天気は」 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;　-&amp;gt; いい(45%)、暑い(25%)、寒い(15%)、悪い(8%)、青い(0.1%)…
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;推理參數主要控制兩件事：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;怎麼選&lt;/strong&gt;下一個 token（Temperature、Top P、Top K）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;什麼時候停止&lt;/strong&gt;生成（Max tokens、Stop sequences）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How to select&lt;/strong&gt; the next token（Temperature、Top P、Top K）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;When to stop&lt;/strong&gt; generating（Max tokens、Stop sequences）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;1-temperature溫度&#34;&gt;1. Temperature（溫度）
+&lt;h2 id=&#34;1-temperature温度&#34;&gt;1. Temperature　(温度)
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;作用：&lt;/strong&gt; 控制輸出的隨機程度。&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th&gt;設定&lt;/th&gt;
           &lt;th&gt;效果&lt;/th&gt;
-          &lt;th&gt;適用場景&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td&gt;低（0～0.3）&lt;/td&gt;
-          &lt;td&gt;傾向選機率最高的詞，回答穩定、一致、保守&lt;/td&gt;
-          &lt;td&gt;程式碼生成、資料抽取、事實問答、分類&lt;/td&gt;
+          &lt;td&gt;Lower Value（0～0.3）&lt;/td&gt;
+          &lt;td&gt;the model almost always picks the most likely next word.&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;中（0.4～0.7）&lt;/td&gt;
-          &lt;td&gt;平衡穩定與自然&lt;/td&gt;
-          &lt;td&gt;一般對話、摘要&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;高（0.8～1.0+）&lt;/td&gt;
-          &lt;td&gt;低機率的詞也有機會被選，更多樣、有創意，但更容易出錯或離題&lt;/td&gt;
-          &lt;td&gt;創意寫作、腦力激盪、文案發想&lt;/td&gt;
+          &lt;td&gt;Higher Value（0.7～1.0）&lt;/td&gt;
+          &lt;td&gt;the model is free to pick less-likely words.&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="大模型推理參數（Inference Parameters）入門 呼叫大型語言模型（LLM）時，可以透過一組推理參數調整模型「如何生成文字」。這些參數不會改變模型本身的知識或能力，只影響輸出的風格、長度與穩定性。\n可以在 Playground（例如 AWS Bedrock 控制台）用滑桿調整，也可以在 API 呼叫中直接傳入。\n背景：模型是怎麼生成文字的？ LLM 是逐個 token 生成的。每一步，模型都會為所有候選 token 計算一個機率分布，然後從中選出一個，接在已生成的文字後面，再繼續下一步。\n1 2 輸入：「今天天氣很」 候選：好(45%)、熱(25%)、冷(15%)、糟(8%)、藍(0.1%)… 推理參數主要控制兩件事：\n怎麼選下一個 token（Temperature、Top P、Top K） 什麼時候停止生成（Max tokens、Stop sequences） 1. Temperature（溫度） 作用： 控制輸出的隨機程度。\n設定 效果 適用場景 低（0～0.3） 傾向選機率最高的詞，回答穩定、一致、保守 程式碼生成、資料抽取、事實問答、分類 中（0.4～0.7） 平衡穩定與自然 一般對話、摘要 高（0.8～1.0+） 低機率的詞也有機會被選，更多樣、有創意，但更容易出錯或離題 創意寫作、腦力激盪、文案發想 原理： Temperature 會「拉平」或「拉尖」機率分布。\n溫度低 → 高機率的詞更突出，幾乎總被選中 溫度高 → 各詞機率差距縮小，冷門詞機會變大 2. Top P（核取樣，Nucleus Sampling） 作用： 依累積機率縮小候選範圍。\n將候選詞按機率由高到低排列，依序累加，直到總和達到 P，只在這些詞中挑選。\n1 2 3 Top P = 0.9 好(45%) + 熱(25%) + 冷(15%) + 糟(8%) = 93% ≥ 90% → 只從這 4 個詞中選 「藍」等冷門詞被排除 特點： 候選詞的數量是動態的。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="呼叫大型語言模型（LLM）時，可以透過一組推理參數調整模型「如何生成文字」。這些參數不會改變模型本身的知識或能力，只影響輸出的風格、長度與穩定性。\n可以在 Playground（例如 AWS Bedrock 控制台）用滑桿調整，也可以在 API 呼叫中直接傳入。\nBackground：how the LLM model generates words? LLM is token by token generating the words. 每一步，模型都會為所有候選 token 計算一個機率分布，然後從中選出一個，接在已生成的文字後面，再繼續下一步。\n1 2 入力：「今日の天気は」 -&gt; いい(45%)、暑い(25%)、寒い(15%)、悪い(8%)、青い(0.1%)… 推理參數主要控制兩件事：\nHow to select the next token（Temperature、Top P、Top K） When to stop generating（Max tokens、Stop sequences） 1. Temperature\u3000(温度) 作用： 控制輸出的隨機程度。\n設定 效果 Lower Value（0～0.3） the model almost always picks the most likely next word. Higher Value（0.7～1.0） the model is free to pick less-likely words. 原理： Temperature 會「拉平」或「拉尖」機率分布。\n">
 <title>【Agent】 Deep Into Inference</title>
 
 <link rel='canonical' href='http://localhost:1313/p/agent-deep-into-inference/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="【Agent】 Deep Into Inference">
-<meta property='og:description' content="大模型推理參數（Inference Parameters）入門 呼叫大型語言模型（LLM）時，可以透過一組推理參數調整模型「如何生成文字」。這些參數不會改變模型本身的知識或能力，只影響輸出的風格、長度與穩定性。\n可以在 Playground（例如 AWS Bedrock 控制台）用滑桿調整，也可以在 API 呼叫中直接傳入。\n背景：模型是怎麼生成文字的？ LLM 是逐個 token 生成的。每一步，模型都會為所有候選 token 計算一個機率分布，然後從中選出一個，接在已生成的文字後面，再繼續下一步。\n1 2 輸入：「今天天氣很」 候選：好(45%)、熱(25%)、冷(15%)、糟(8%)、藍(0.1%)… 推理參數主要控制兩件事：\n怎麼選下一個 token（Temperature、Top P、Top K） 什麼時候停止生成（Max tokens、Stop sequences） 1. Temperature（溫度） 作用： 控制輸出的隨機程度。\n設定 效果 適用場景 低（0～0.3） 傾向選機率最高的詞，回答穩定、一致、保守 程式碼生成、資料抽取、事實問答、分類 中（0.4～0.7） 平衡穩定與自然 一般對話、摘要 高（0.8～1.0+） 低機率的詞也有機會被選，更多樣、有創意，但更容易出錯或離題 創意寫作、腦力激盪、文案發想 原理： Temperature 會「拉平」或「拉尖」機率分布。\n溫度低 → 高機率的詞更突出，幾乎總被選中 溫度高 → 各詞機率差距縮小，冷門詞機會變大 2. Top P（核取樣，Nucleus Sampling） 作用： 依累積機率縮小候選範圍。\n將候選詞按機率由高到低排列，依序累加，直到總和達到 P，只在這些詞中挑選。\n1 2 3 Top P = 0.9 好(45%) + 熱(25%) + 冷(15%) + 糟(8%) = 93% ≥ 90% → 只從這 4 個詞中選 「藍」等冷門詞被排除 特點： 候選詞的數量是動態的。\n">
+<meta property='og:description' content="呼叫大型語言模型（LLM）時，可以透過一組推理參數調整模型「如何生成文字」。這些參數不會改變模型本身的知識或能力，只影響輸出的風格、長度與穩定性。\n可以在 Playground（例如 AWS Bedrock 控制台）用滑桿調整，也可以在 API 呼叫中直接傳入。\nBackground：how the LLM model generates words? LLM is token by token generating the words. 每一步，模型都會為所有候選 token 計算一個機率分布，然後從中選出一個，接在已生成的文字後面，再繼續下一步。\n1 2 入力：「今日の天気は」 -&gt; いい(45%)、暑い(25%)、寒い(15%)、悪い(8%)、青い(0.1%)… 推理參數主要控制兩件事：\nHow to select the next token（Temperature、Top P、Top K） When to stop generating（Max tokens、Stop sequences） 1. Temperature\u3000(温度) 作用： 控制輸出的隨機程度。\n設定 效果 Lower Value（0～0.3） the model almost always picks the most likely next word. Higher Value（0.7～1.0） the model is free to pick less-likely words. 原理： Temperature 會「拉平」或「拉尖」機率分布。\n">
 <meta property='og:url' content='http://localhost:1313/p/agent-deep-into-inference/'>
 <meta property='og:site_name' content='Yuduki&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-10-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-10-19T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-10-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-10-20T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="【Agent】 Deep Into Inference">
-<meta name="twitter:description" content="大模型推理參數（Inference Parameters）入門 呼叫大型語言模型（LLM）時，可以透過一組推理參數調整模型「如何生成文字」。這些參數不會改變模型本身的知識或能力，只影響輸出的風格、長度與穩定性。\n可以在 Playground（例如 AWS Bedrock 控制台）用滑桿調整，也可以在 API 呼叫中直接傳入。\n背景：模型是怎麼生成文字的？ LLM 是逐個 token 生成的。每一步，模型都會為所有候選 token 計算一個機率分布，然後從中選出一個，接在已生成的文字後面，再繼續下一步。\n1 2 輸入：「今天天氣很」 候選：好(45%)、熱(25%)、冷(15%)、糟(8%)、藍(0.1%)… 推理參數主要控制兩件事：\n怎麼選下一個 token（Temperature、Top P、Top K） 什麼時候停止生成（Max tokens、Stop sequences） 1. Temperature（溫度） 作用： 控制輸出的隨機程度。\n設定 效果 適用場景 低（0～0.3） 傾向選機率最高的詞，回答穩定、一致、保守 程式碼生成、資料抽取、事實問答、分類 中（0.4～0.7） 平衡穩定與自然 一般對話、摘要 高（0.8～1.0+） 低機率的詞也有機會被選，更多樣、有創意，但更容易出錯或離題 創意寫作、腦力激盪、文案發想 原理： Temperature 會「拉平」或「拉尖」機率分布。\n溫度低 → 高機率的詞更突出，幾乎總被選中 溫度高 → 各詞機率差距縮小，冷門詞機會變大 2. Top P（核取樣，Nucleus Sampling） 作用： 依累積機率縮小候選範圍。\n將候選詞按機率由高到低排列，依序累加，直到總和達到 P，只在這些詞中挑選。\n1 2 3 Top P = 0.9 好(45%) + 熱(25%) + 冷(15%) + 糟(8%) = 93% ≥ 90% → 只從這 4 個詞中選 「藍」等冷門詞被排除 特點： 候選詞的數量是動態的。\n">
+<meta name="twitter:description" content="呼叫大型語言模型（LLM）時，可以透過一組推理參數調整模型「如何生成文字」。這些參數不會改變模型本身的知識或能力，只影響輸出的風格、長度與穩定性。\n可以在 Playground（例如 AWS Bedrock 控制台）用滑桿調整，也可以在 API 呼叫中直接傳入。\nBackground：how the LLM model generates words? LLM is token by token generating the words. 每一步，模型都會為所有候選 token 計算一個機率分布，然後從中選出一個，接在已生成的文字後面，再繼續下一步。\n1 2 入力：「今日の天気は」 -&gt; いい(45%)、暑い(25%)、寒い(15%)、悪い(8%)、青い(0.1%)… 推理參數主要控制兩件事：\nHow to select the next token（Temperature、Top P、Top K） When to stop generating（Max tokens、Stop sequences） 1. Temperature\u3000(温度) 作用： 控制輸出的隨機程度。\n設定 效果 Lower Value（0～0.3） the model almost always picks the most likely next word. Higher Value（0.7～1.0） the model is free to pick less-likely words. 原理： Temperature 會「拉平」或「拉尖」機率分布。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
         
@@ -268,8 +268,7 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#背景模型是怎麼生成文字的">背景：模型是怎麼生成文字的？</a></li>
-    <li><a href="#1-temperature溫度">1. Temperature（溫度）</a></li>
+    <li><a href="#1-temperature温度">1. Temperature　(温度)</a></li>
     <li><a href="#2-top-p核取樣nucleus-sampling">2. Top P（核取樣，Nucleus Sampling）</a></li>
     <li><a href="#3-top-k">3. Top K</a></li>
     <li><a href="#4-max-tokens最大-token-數">4. Max Tokens（最大 Token 數）</a></li>
@@ -326,7 +325,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Oct 19, 2026</time>
+                <time class="article-time--published">Oct 20, 2026</time>
             </div>
         
 
@@ -356,53 +355,44 @@
     <section class="article-content">
     
     
-    <h1 id="大模型推理參數inference-parameters入門">大模型推理參數（Inference Parameters）入門
-</h1><p>呼叫大型語言模型（LLM）時，可以透過一組<strong>推理參數</strong>調整模型「如何生成文字」。這些參數不會改變模型本身的知識或能力，只影響輸出的風格、長度與穩定性。</p>
+    <p>呼叫大型語言模型（LLM）時，可以透過一組<strong>推理參數</strong>調整模型「如何生成文字」。這些參數不會改變模型本身的知識或能力，只影響輸出的風格、長度與穩定性。</p>
 <p>可以在 Playground（例如 AWS Bedrock 控制台）用滑桿調整，也可以在 API 呼叫中直接傳入。</p>
 <hr>
-<h2 id="背景模型是怎麼生成文字的">背景：模型是怎麼生成文字的？
-</h2><p>LLM 是<strong>逐個 token 生成</strong>的。每一步，模型都會為所有候選 token 計算一個機率分布，然後從中選出一個，接在已生成的文字後面，再繼續下一步。</p>
+<h1 id="backgroundhow-the-llm-model-generates-words">Background：how the LLM model generates words?
+</h1><p>LLM is <strong>token by token</strong> generating the words. 每一步，模型都會為所有候選 token 計算一個機率分布，然後從中選出一個，接在已生成的文字後面，再繼續下一步。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">輸入：「今天天氣很」
-</span></span><span class="line"><span class="cl">候選：好(45%)、熱(25%)、冷(15%)、糟(8%)、藍(0.1%)…
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">入力：「今日の天気は」 
+</span></span><span class="line"><span class="cl">　-&gt; いい(45%)、暑い(25%)、寒い(15%)、悪い(8%)、青い(0.1%)…
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>推理參數主要控制兩件事：</p>
 <ol>
-<li><strong>怎麼選</strong>下一個 token（Temperature、Top P、Top K）</li>
-<li><strong>什麼時候停止</strong>生成（Max tokens、Stop sequences）</li>
+<li><strong>How to select</strong> the next token（Temperature、Top P、Top K）</li>
+<li><strong>When to stop</strong> generating（Max tokens、Stop sequences）</li>
 </ol>
 <hr>
-<h2 id="1-temperature溫度">1. Temperature（溫度）
+<h2 id="1-temperature温度">1. Temperature　(温度)
 </h2><p><strong>作用：</strong> 控制輸出的隨機程度。</p>
 <div class="table-wrapper"><table>
   <thead>
       <tr>
           <th>設定</th>
           <th>效果</th>
-          <th>適用場景</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>低（0～0.3）</td>
-          <td>傾向選機率最高的詞，回答穩定、一致、保守</td>
-          <td>程式碼生成、資料抽取、事實問答、分類</td>
+          <td>Lower Value（0～0.3）</td>
+          <td>the model almost always picks the most likely next word.</td>
       </tr>
       <tr>
-          <td>中（0.4～0.7）</td>
-          <td>平衡穩定與自然</td>
-          <td>一般對話、摘要</td>
-      </tr>
-      <tr>
-          <td>高（0.8～1.0+）</td>
-          <td>低機率的詞也有機會被選，更多樣、有創意，但更容易出錯或離題</td>
-          <td>創意寫作、腦力激盪、文案發想</td>
+          <td>Higher Value（0.7～1.0）</td>
+          <td>the model is free to pick less-likely words.</td>
       </tr>
   </tbody>
 </table></div>
